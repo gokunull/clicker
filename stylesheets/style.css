@@ -191,7 +191,7 @@ body{
 #item_oldCalculator{
 	background-image: url(../images/test.png);
     background-repeat: no-repeat;
-    background-position: 0 -.8em;
+    background-position: center;
 	opacity: 0.5;
 }
 

@@ -5,75 +5,75 @@ var bitcoinRate = 0
 // TODO: items should be part of the Game variable
 var items = [
   {
-    "name": "item_oldCalculator",
+    "name": "item_grayStone",
     "price": "0.0000001"
   },
   {
-    "name": "item_oldCpu",
+    "name": "item_woodSpear",
     "price": "0.00000125"
   },
   {
-    "name": "item_oldComputerFromGrandpa",
+    "name": "item_cocktailMolotov",
     "price": "0.00003"
   },
   {
-    "name": "item_rapsberrypy",
+    "name": "item_rgdGrenade",
     "price": "0.00005"
   },
   {
-    "name": "item_smartphone",
+    "name": "item_troopMine",
     "price": "0.0005"
   },
   {
-    "name": "item_middleClassPC",
+    "name": "item_mortarMP120",
     "price": "0.0015"
   },
   {
-    "name": "item_cheapServer",
+    "name": "item_autoMortar",
     "price": "0.004"
   },
   {
-    "name": "item_gamingPC",
+    "name": "item_howitzerT12",
     "price": "0.015"
   },
   {
-    "name": "item_cheapMiner",
+    "name": "item_weaponStugna",
     "price": "0.05"
   },
   {
-    "name": "item_highEndUltraPC",
+    "name": "item_weaponJavelin",
     "price": "0.15"
   },
   {
-    "name": "item_bigMiner",
+    "name": "item_weaponNLAW",
     "price": "1.5"
   },
   {
-    "name": "item_miningFarm",
+    "name": "item_droneBlade",
     "price": "250"
   },
   {
-    "name": "item_nasaPC",
+    "name": "item_weaponUKR",
     "price": "5000"
   },
   {
-    "name": "item_quantumRig",
+    "name": "item_bombBogdana",
     "price": "245000"
   },
   {
-    "name": "item_miningFarmSpace",
+    "name": "item_bombVerba",
     "price": "2000000"
   },
   {
-    "name": "item_miningFarmMoon",
+    "name": "item_droneBayraktar",
     "price": "75500000"
   },
   {
-    "name": "item_bitcoinTimeMachine",
+    "name": "item_fighterSU",
     "price": "975000000"
   },
   {
-    "name": "item_blackHolePoweredMiner",
+    "name": "item_bombTochka",
     "price": "750000000000"
   }
 ]
@@ -172,7 +172,7 @@ Game.setPriceAtGameBeginning = function (element, price, itemAmount) {
   var calculation = (parseFloat(price) * Math.pow(multiplier, parseInt(itemAmount))).toFixed(8)
 
   // Showing the actual price
-  element.children()[2].textContent = calculation + " Bitcoins"
+  element.children()[2].textContent = calculation + " Invaders"
 
   // Set the data-price attribute with the new price
   element.attr("data-price", calculation.toString())
@@ -308,7 +308,7 @@ Game.setNewPrice = function()
         var calculation = (parseFloat(items[i].price) * Math.pow(multiplier, parseInt(itemAmount))).toFixed(8)
 
         // Showing the actual price
-        $element.children()[2].textContent = calculation + " Bitcoins"
+        $element.children()[2].textContent = calculation + " Invaders"
 
         // Set the data-price attribute with the new price
         $element.attr("data-price", calculation.toString())
@@ -533,6 +533,3 @@ $(document).ready(function () {
   })
 
 });
-
-
-
