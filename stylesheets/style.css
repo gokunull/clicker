@@ -1,24 +1,40 @@
-/* Animations woohoo */
-
-/* Rotation animation */
-/* Solution found on StackOverflow: https://stackoverflow.com/questions/16771225/css3-rotate-animation#16771693 */
-@keyframes rotation {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform:rotate(360deg);
-    }
+/* Animation gif */
+/*
+@keyframes bounce {
+  from {
+    top: 100px;
+    animation-timing-function: ease-out;
+  }
+  25% {
+    top: 50px;
+    animation-timing-function: ease-in;
+  }
+  50% {
+    top: 100px;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    top: 75px;
+    animation-timing-function: ease-in;
+  }
+  to {
+    top: 100px;
+  }
 }
+*/
 
 @font-face {
-    font-family: VCR OSD Mono;
-    src: url("../fonts/VCR_OSD_MONO.ttf");
+	
+	font-family: Gunplay_RG;
+    src: url("../fonts/Gunplay_RG.ttf");
 }
 
-/* Body */
-/* Solution for disabling text selection found on StackOverflow:
-https://stackoverflow.com/questions/3779534/how-do-i-disable-text-selection-with-css-or-javascript */
 body{
-    background: #ffe09f;
+    /*background: #4d602a;*/
+	background-image: url("../images/Background.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	 background-position: center;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select:none;
@@ -31,38 +47,38 @@ body{
     display: flex;
 }
 
-/* Left Container */
-/* just a placeholder atm */
 .leftContainer{
     width: calc(100% * 0.25);
 }
 
 .version{
-    font-family: VCR OSD Mono, cursive;
+	font-family: Gunplay_RG;
 }
 
 .resetButton{
     position: absolute;
     bottom: 5px;
     left: 5px;
-    width: 9%;
-    height: 4%;
+    width: 8%;
+    height: 8%;
     border: 3px solid black;
     font-size: 12pt;
-    font-family: VCR OSD Mono, cursive;
-    background: #ffb84c;
+	font-family: Gunplay_RG;
+    background: #c3b091;
     color: white;
     cursor: pointer;
 }
 
 /* Main Container */
 /* THE BITCOIN IMAGE */
+
 .mainGameContent{
     width: calc(100% * 0.5);
 }
 
 /* Right Container */
 /* All items which you can buy */
+
 .rightContainer{
     width: calc(100% * 0.25);
     border: 4px solid white;
@@ -73,30 +89,33 @@ body{
 
 .bitcoinAmountDisplay{
     text-align: center;
-    font-family: VCR OSD Mono, cursive;
-    font-size: 45pt;
+	font-family: Gunplay_RG;
+    font-size: 30pt;
     color: white;
     text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
     margin: 20px 0 0 0px;
 }
+
 .satoshiAmountDisplay {
     text-align: center;
-    font-family: VCR OSD Mono, cursive;
+	font-family: Gunplay_RG;
     font-size: 15pt;
     color: white;
     text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
     padding: 0 !important;
     margin: 0 0 -15px 0px;
+
 }
 .bSecRate{
     text-align: center;
-    font-family: VCR OSD Mono, cursive;
+	font-family: Gunplay_RG;
     font-size: 25pt;
     color: white;
-    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black
+    text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
 }
 
 /* BITCOIN */
+
 .bitcoin{
     width: 25%;
     display: block;
@@ -106,9 +125,10 @@ body{
     margin: 0 auto;
     top: 25%;
     transition: width 0.2s ease-in-out, top 0.2s ease-in-out;
-    animation: rotation 20s linear infinite;
+    animation: bounce 15s linear infinite;
     border-radius: 500px;
 }
+
 .bitcoin:hover{
     width: 27%;
     top: 23%;
@@ -124,7 +144,7 @@ body{
 /* Item list */
 .purchaseList{
     list-style-type: none;
-    font-family: "VCR OSD Mono", cursive;
+	font-family: Gunplay_RG;
     margin: 0;
     padding: 0;
 }
@@ -142,7 +162,7 @@ body{
         margin: 0 auto;
         top: 35%;
         transition: width 0.2s ease-in-out, top 0.2s ease-in-out;
-        animation: rotation 20s linear infinite;
+		animation: bounce 15s linear infinite;
         border-radius: 500px;
     }
     .bitcoin:hover{
@@ -158,25 +178,26 @@ body{
     }
 }
 
-/* Item list item */
+/* Item section */
+
 .purchaseItem{
     width: 99%;
     border-top: 3px solid white;
     border-bottom: 3px solid white;
     border-right: 3px solid white;
     padding-left: 10px;
-    background: linear-gradient(#ffe09f, #ffb84c);
+	background: gray;
 }
 .purchaseItem:hover{
-    background: linear-gradient(90deg, #ffe09f, #ffb84c);
+	background: linear-gradient(#e66465, #9198e5);
     cursor: pointer;
 }
 .amountOfItem{
     float: right;
-    font-size: 66pt;
+    font-size: 55pt;
     margin-right: 15px;
-    color: rgba(0,0,0,.4);
-    margin-top: -10px;
+	color: white;
+    margin-top: 5px;
     margin-bottom: -50px;
 }
 .itemHeadline{
@@ -184,20 +205,162 @@ body{
     font-weight: bold;
     margin-bottom: 0px;
     margin-top: 10px;
-    color: white;
+    color: #758000;
     text-shadow: 1px 1px 1px black, 1px -1px 1px black, -1px 1px 1px black, -1px -1px 1px black;
 }
 
-#item_oldCalculator{
-	background-image: url(../images/test.png);
-    background-repeat: no-repeat;
-    background-position: center;
-	opacity: 0.5;
+.itemPrice{
+	font-size: 12pt;
+	color: white;
+	font-family: Gunplay_RG;
 }
 
-#item_oldCpu{
-	background-image: url(../images/test2.png);
+#target {
+	
+}
+
+/* Item list */
+
+#item_grayStone{
+	background-image: url(../images/Stone.png);
     background-repeat: no-repeat;
-    background-position: 0 -.8em;
-	opacity: 0.5;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_woodSpear{
+	background-image: url(../images/Spear.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_cocktailMolotov{
+	background-image: url(../images/Molotov.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_rgdGrenade{
+	background-image: url(../images/Grenade.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_troopMine{
+	background-image: url(../images/Mine.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_mortarMP120{
+	background-image: url(../images/Mortar.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_autoMortar{
+	background-image: url(../images/AutoMortar.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_howitzerT12{
+	background-image: url(../images/Howitzer.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_weaponStugna{
+	background-image: url(../images/Stugna.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_weaponJavelin{
+	background-image: url(../images/Javelin.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_weaponNLAW{
+	background-image: url(../images/NLAW.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_droneBlade{
+	background-image: url(../images/Switchblade.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_weaponUKR{
+	background-image: url(../images/UKR.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_bombBogdana{
+	background-image: url(../images/Bogdana.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_bombVerba{
+	background-image: url(../images/Verba.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_droneBayraktar{
+	background-image: url(../images/Bayraktar.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_fighterSU{
+	background-image: url(../images/SU27.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
+}
+
+#item_bombTochka{
+	background-image: url(../images/TochkaU.png);
+    background-repeat: no-repeat;
+    background-position: center;
+	background-size: contain;
+	opacity: 0.75;
 }

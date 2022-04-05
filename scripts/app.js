@@ -503,8 +503,6 @@ $(document).ready(function () {
         $(".bitcoinAmount").text(bitcoins.toFixed(8))
       }
 
-      // Calculation the Satoshi amount
-
       // Increasing the amount of the specific item
       Game.itemAction(id)
 
