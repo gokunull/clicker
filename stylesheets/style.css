@@ -220,8 +220,8 @@ body{
 }
 
 * {
-    -ms-touch-action: manipulation;
-    touch-action: manipulation;
+    -ms-touch-action: none;
+    touch-action: none;
   }
 
 /* Item list */
