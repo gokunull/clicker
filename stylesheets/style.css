@@ -34,7 +34,7 @@ body{
 	background-image: url("../images/Background.gif");
 	background-repeat: no-repeat;
 	background-size: cover;
-	 background-position: center;
+	background-position: center;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select:none;
@@ -218,6 +218,11 @@ body{
 #target {
 	
 }
+
+* {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+  }
 
 /* Item list */
 
